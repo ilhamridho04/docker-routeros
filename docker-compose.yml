@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  routeros:
+    image: ilhamridho/routeros:latest
+    container_name: routeros-container
+    ports:
+      - "5900:5900"
+      - "2221:21"
+      - "2222:22"
+      - "2223:23"
+      - "2280:80"
+      - "2443:443"
+      - "8291:8291"
+      - "8728:8728"
+      - "8729:8729"
+      - "50:50"
+      - "51:51"
+      - "500:500/udp"
+      - "4500:4500/udp"
+      - "1194:1194/tcp"
+      - "1194:1194/udp"
+      - "1701:1701"
+      - "1723:1723"
+    volumes:
+      - ./scripts:/routeros/scripts
+    entrypoint: ["/routeros/scripts/entrypoint.sh"]
