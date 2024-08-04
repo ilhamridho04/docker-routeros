@@ -8,6 +8,36 @@ Repositori ini berisi setup Docker untuk menjalankan RouterOS menggunakan QEMU. 
 - Docker Compose
 
 ## Memulai
+### Menggunakan docker hub
+#### Untuk menarik image Docker dari Docker Hub, gunakan perintah berikut:
+```sh
+docker pull ilhamridho/routeros:latest
+```
+
+#### Menjalankan Container Docker
+Gunakan perintah berikut untuk menjalankan container dengan image yang telah diunduh. Perintah ini mengekspos berbagai port yang digunakan oleh RouterOS dan layanan VPN:
+```sh
+docker run -d \
+  --name routeros-container \
+  -p 5900:5900 \      # VNC
+  -p 2221:21 \        # FTP
+  -p 2222:22 \        # SSH
+  -p 2223:23 \        # Telnet
+  -p 2280:80 \        # HTTP
+  -p 2443:443 \       # HTTPS
+  -p 8291:8291 \      # Winbox
+  -p 8728:8728 \      # API
+  -p 8729:8729 \      # API-SSL
+  -p 50:50 \          # IPSec (ESP)
+  -p 51:51 \          # IPSec (AH)
+  -p 500:500/udp \    # IKE
+  -p 4500:4500/udp \  # NAT-T
+  -p 1194:1194/tcp \  # OpenVPN TCP
+  -p 1194:1194/udp \  # OpenVPN UDP
+  -p 1701:1701 \      # L2TP
+  -p 1723:1723 \      # PPTP
+  ilhamridho/routeros:latest
+```
 
 ### Clone Repository
 
