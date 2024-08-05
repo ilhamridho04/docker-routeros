@@ -63,7 +63,7 @@ Anda dapat menyesuaikan versi RouterOS dengan mengatur variabel lingkungan berik
 #### Script
 File `scripts/entrypoint.sh` berisi script startup untuk container. Anda dapat memodifikasi script ini untuk menyesuaikan perilaku startup.
 
-### Membangun dan Menjalankan Container Docker
+## Membangun dan Menjalankan Container Docker
 1. Membangun Image Docker
    Jika Anda belum membangun image, Anda dapat membangunnya menggunakan Docker Compose:
    ```sh
@@ -82,7 +82,7 @@ File `scripts/entrypoint.sh` berisi script startup untuk container. Anda dapat m
    docker-compose ps
    ```
 
-### Mengakses RouterOS
+## Mengakses RouterOS
 Setelah container berjalan, Anda dapat mengakses RouterOS melalui port yang diekspos. Berikut adalah port yang dapat digunakan:
 
 - `VNC: 5900` - Akses melalui VNC
