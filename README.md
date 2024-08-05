@@ -19,23 +19,23 @@ Gunakan perintah berikut untuk menjalankan container dengan image yang telah diu
 ```sh
 docker run -d \
   --name routeros-container \
-  -p 5900:5900 \      # VNC
-  -p 2221:21 \        # FTP
-  -p 2222:22 \        # SSH
-  -p 2223:23 \        # Telnet
-  -p 2280:80 \        # HTTP
-  -p 2443:443 \       # HTTPS
-  -p 8291:8291 \      # Winbox
-  -p 8728:8728 \      # API
-  -p 8729:8729 \      # API-SSL
-  -p 50:50 \          # IPSec (ESP)
-  -p 51:51 \          # IPSec (AH)
-  -p 500:500/udp \    # IKE
-  -p 4500:4500/udp \  # NAT-T
-  -p 1194:1194/tcp \  # OpenVPN TCP
-  -p 1194:1194/udp \  # OpenVPN UDP
-  -p 1701:1701 \      # L2TP
-  -p 1723:1723 \      # PPTP
+  -p 5900:5900 \
+  -p 2221:21 \
+  -p 2222:22 \
+  -p 2223:23 \
+  -p 2280:80 \
+  -p 2443:443 \
+  -p 8291:8291 \
+  -p 8728:8728 \
+  -p 8729:8729 \
+  -p 50:50 \
+  -p 51:51 \
+  -p 500:500/udp \
+  -p 4500:4500/udp \
+  -p 1194:1194/tcp \
+  -p 1194:1194/udp \
+  -p 1701:1701 \
+  -p 1723:1723 \
   ilhamridho/routeros:latest
 ```
 
